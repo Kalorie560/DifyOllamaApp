@@ -1,0 +1,21 @@
+# Python virtual environment
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+
+# Database files
+data/dify/postgres-data/
+data/dify/redis-data/
+data/dify/storage/
+data/ollama/
+
+# Logs
+*.log
+
+# OS specific files
+.DS_Store
+Thumbs.db
