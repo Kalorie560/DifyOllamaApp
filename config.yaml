@@ -1,0 +1,43 @@
+# Configuration for Dify with Ollama Integration
+
+# Network Configuration
+network:
+  dify_api_port: 5000
+  dify_web_port: 3000
+  ollama_port: 11434
+  # Bind address - 0.0.0.0 allows connections from any IP
+  bind_address: "0.0.0.0"
+
+# Docker Configuration  
+docker:
+  compose_file: "docker-compose.yml"
+  project_name: "dify-ollama"
+  restart_policy: "unless-stopped"
+  
+# Dify Configuration
+dify:
+  version: "latest"
+  data_directory: "./data/dify"
+  # Admin credentials for initial setup
+  admin_email: "admin@example.com"
+  
+# Ollama Configuration
+ollama:
+  version: "latest"
+  data_directory: "./data/ollama"
+  # Default models to pull
+  default_models:
+    - "llama3"
+    - "mistral"
+  
+# Resource Limits
+resources:
+  memory_limit: "8g"
+  cpu_limit: "4"
+
+# Application Settings
+app:
+  auto_start: true
+  check_dependencies: true
+  enable_compatibility_mode: false
+  log_level: "info"
